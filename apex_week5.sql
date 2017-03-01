@@ -1,6 +1,3 @@
-CREATE DATABASE apex;
-USE apex;
-
 CREATE TABLE agents (
   id INT(11) NOT NULL AUTO_INCREMENT,
   codename VARCHAR(255),
@@ -9,8 +6,8 @@ CREATE TABLE agents (
   PRIMARY KEY (id)
 );
 
-INSERT INTO agents 
-(`id`, `codename`, `public_key`, `private_key`) VALUES 
+INSERT INTO agents
+(`id`, `codename`, `public_key`, `private_key`) VALUES
 (1, 'agent99', '-----BEGIN PUBLIC KEY-----
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyKNvqGv5ROD2h3HQLJTE
 U/MDNGrBMSEfIzftA4hUtsSGgngN1cpYuaQbt93rkzNbxvV11oN0laHrXMpB35Gw
@@ -47,8 +44,8 @@ EZOfhU7S6C2gTn9Xnn2VbNLo3PxX9Qap647EDYJE8+rPUA4s3WHjXVBtTxYifbSm
 nI/KYcrMuGSlkc8G/nZOQrj1UnEnZdZgi9mNKkUulL28ckqcRLkMXbygC2Jsgf/X
 P9mmGf9jCR0eqK9u3bnISOM=
 -----END PRIVATE KEY-----');
-INSERT INTO agents 
-(`id`, `codename`, `public_key`, `private_key`) VALUES 
+INSERT INTO agents
+(`id`, `codename`, `public_key`, `private_key`) VALUES
 (2, 'jamesbond', '-----BEGIN PUBLIC KEY-----
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqimZ9ohXVGxlzSBUf59q
 PzjUWPthuhrAhPANKtxX7dir0FS/6Y5IFqrWKSxNKPEPW8kapD89HjUCE1Qm9eak
@@ -85,8 +82,8 @@ Fofndu+omRspZzPj0qXRafcwDcWqKd3Pq0jG808CErYfMjFkrPRCY6oLbEm9K9h2
 Ar88yhI9Ycgug4BIDKyG0YhRm4VhFvCvVEbGXB0qNaXcOuouq3YRIKYWhBBCg6Ha
 S8mK/zaq7cRpdTlLqAvg/HFY
 -----END PRIVATE KEY-----');
-INSERT INTO agents 
-(`id`, `codename`, `public_key`, `private_key`) VALUES 
+INSERT INTO agents
+(`id`, `codename`, `public_key`, `private_key`) VALUES
 (3, 'natasha', '-----BEGIN PUBLIC KEY-----
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzVMZTu3gCDuqGQ2cNKjc
 buO9fE9XiMX9vg5F97+1+KEyQN6bjfUm4VFtmmcIQfdfoENOeDc4ZanebcpCpPBf
