@@ -67,6 +67,9 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 Describe any challenges encountered while building the app.
 
+- Although my symmetric encryption page seemed to be functioning correctly for any
+  input I gave it, it failed to decrypt the message from task 2 (returned empty string).
+
 ## License
 
     Copyright [2017] [William Brooks Van Buren]
