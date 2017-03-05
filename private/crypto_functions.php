@@ -45,8 +45,11 @@ const PUBLIC_KEY_CONFIG = array(
 );
 
 function generate_keys($config=PUBLIC_KEY_CONFIG) {
-  $private_key = 'Ha ha!';
-  $public_key = 'Ho ho!';
+  $pair = openssl_pkey_new(PUBLIC_KEY_CONFIG);
+
+  openssl_pkey_export($pair, $private_key);
+  $key_details = openssl_pkey_get_details($pair);
+  $public_key = $key_details["key"];
 
   return array('private' => $private_key, 'public' => $public_key);
 }
