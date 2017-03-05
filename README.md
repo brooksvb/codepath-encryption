@@ -14,8 +14,8 @@ The following **required** functionality is completed:
   * [ ]  Required: Encrypt a response and include in this README
 
 3\. Generate Public-Private Keys
-  * [ ]  Required: Repair the key generator code
-  * [ ]  Required: Generate keys for "johnsteed" and add him to the Agent Directory
+  * [x]  Required: Repair the key generator code
+  * [x]  Required: Generate keys for "johnsteed" and add him to the Agent Directory
 
 4\. Asymmetric Encrypt/Decrypt
   * [ ]  Required: Repair the asymmetric encrypt and decrypt code
