@@ -18,7 +18,7 @@ The following **required** functionality is completed:
   * [x]  Required: Generate keys for "johnsteed" and add him to the Agent Directory
 
 4\. Asymmetric Encrypt/Decrypt
-  * [ ]  Required: Repair the asymmetric encrypt and decrypt code
+  * [x]  Required: Repair the asymmetric encrypt and decrypt code
 
 5\. Create/Verify Signature
   * [ ]  Required: Repair the create and verify signature code
