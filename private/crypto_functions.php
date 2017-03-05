@@ -8,11 +8,11 @@ const CIPHER_METHOD = 'AES-256-CBC';
 function key_encrypt($string, $key, $cipher_method=CIPHER_METHOD) {
   $key = str_pad($key, 32, '*'); // Need 32 bytes
 
-  $iv_length = openssl_cipher_iv_length(CIPHER_METHOD); // initialize vector
+  $iv_length = openssl_cipher_iv_length($cipher_method); // initialize vector
   $iv = openssl_random_pseudo_bytes($iv_length);
 
   // Encrypt string
-  $encrypted = openssl_encrypt($string, CIPHER_METHOD, $key, OPENSSL_RAW_DATA, $iv);
+  $encrypted = openssl_encrypt($string, $cipher_method, $key, OPENSSL_RAW_DATA, $iv);
 
   // Save the iv data for decryption
   $ret = $iv.$encrypted;
@@ -24,13 +24,14 @@ function key_encrypt($string, $key, $cipher_method=CIPHER_METHOD) {
 
 function key_decrypt($string, $key, $cipher_method=CIPHER_METHOD) {
   $key = str_pad($key, 32, '*'); // Need 32 bytes
-  $iv_with_ciphertext = base64_decode($message);
+  $iv_with_ciphertext = base64_decode($string);
 
-  $iv_length = openssl_cipher_iv_length(CIPHER_METHOD);
+  $iv_length = openssl_cipher_iv_length($cipher_method);
   $iv = substr($iv_with_ciphertext, 0, $iv_length);
   $ciphertext = substr($iv_with_ciphertext, $iv_length);
 
-  return "PWNED YOU!";
+  return openssl_decrypt($ciphertext, $cipher_method, $key, OPENSSL_RAW_DATA, $iv);
+  // return "PWNED YOU!";
 }
 
 
