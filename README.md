@@ -21,7 +21,7 @@ The following **required** functionality is completed:
   * [x]  Required: Repair the asymmetric encrypt and decrypt code
 
 5\. Create/Verify Signature
-  * [ ]  Required: Repair the create and verify signature code
+  * [x]  Required: Repair the create and verify signature code
 
 6\. Encrypted Message 2
   * [ ]  Required: Decrypt the message

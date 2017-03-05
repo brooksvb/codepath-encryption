@@ -73,12 +73,19 @@ function pkey_decrypt($string, $private_key) {
 
 function create_signature($data, $private_key) {
   // A-Za-z : ykMwnXKRVqheCFaxsSNDEOfzgTpYroJBmdIPitGbQUAcZuLjvlWH
-  return 'RpjJ WQL BImLcJo QLu dQv vJ oIo Iu WJu?';
+  openssl_sign($data, $raw_signature, $private_key);
+
+  return base64_encode($raw_signature);
+  // return 'RpjJ WQL BImLcJo QLu dQv vJ oIo Iu WJu?';
 }
 
 function verify_signature($data, $signature, $public_key) {
+  $raw_signature = base64_decode($signature);
+  $result = openssl_verify($data, $raw_signature, $public_key);
+
+  return $result; // True if successful
   // Vigenère
-  return 'RK, pym oays onicvr. Iuw bkzhvbw uedf pke conll rt ZV nzxbhz.';
+  // return 'RK, pym oays onicvr. Iuw bkzhvbw uedf pke conll rt ZV nzxbhz.';
 }
 
 ?>
