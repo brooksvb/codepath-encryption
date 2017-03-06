@@ -36,11 +36,11 @@ The following **required** functionality is completed:
   lft+EzBsCXm8oqd7tGlN6bAKTa8EZGUbjoedxiYypc12Q4d895hS/ei9MT5EU34krUvbyo++/bCfNdtYslHUzu+2D7hh/6AWDnCCI17W8mNXIdN+nyaUH9Zkx3pneYVEPO5+F14esl9iRX4ofmh0aRQagbkaR85M+GyFjl3zjtttzC7YNbasMx00NiigugSeRwSO1FaRdK5p28KS5F/69OQGpHn2S3szjZj2TxhuLdt1tiaiI9gEuxlNWfIIzX/cZXiEdEvOZf+i2IUuo7xt3MZMoWkbIWtSiNDHep8MVswoB+tAmXohYLh/8kZcLIP6P2XjCY3yawz48pJUIcXsTA==
 
 7\. Agent Messages
-  * [ ]  Required: Repair the dropbox code
-  * [ ]  Required: Repair the messages area
-  * [ ]  Required: Display encrypted messages for all agents
-  * [ ]  Required: Messages indicate whether the message signature is valid
-  * [ ]  Required: Your messages are automatically decrypted
+  * [x]  Required: Repair the dropbox code
+  * [x]  Required: Repair the messages area
+  * [x]  Required: Display encrypted messages for all agents
+  * [x]  Required: Messages indicate whether the message signature is valid
+  * [x]  Required: Your messages are automatically decrypted
 
 8\. Identify the Double Agent
   * [ ]  Required: Decrypt as many email messages as possible
@@ -76,6 +76,15 @@ Describe any challenges encountered while building the app.
 
 - Although my symmetric encryption page seemed to be functioning correctly for any
   input I gave it, it failed to decrypt the message from task 2 (returned empty string).
+- If I had more time I would like to make the agents and messages pages more robust
+  by adding checks and behaviors for when viewing an invalid (nonexistent) agent id, viewing
+  messages from invalid agent id's, etc.
+- Once again, although my signature functions seem to work perfectly fine for any
+  input I give them, for all the preexisting messages in the database the function
+  claims the signature is invalid.
+- I'm confused what the issue is. For messages that I have created and inserted into
+  the database using the dropbox, the signature check is working correctly. It makes
+  me suspect that I'm incorrectly using the OpenSSL functions.
 
 ## License
 

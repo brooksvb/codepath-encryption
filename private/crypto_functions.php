@@ -79,11 +79,15 @@ function create_signature($data, $private_key) {
   // return 'RpjJ WQL BImLcJo QLu dQv vJ oIo Iu WJu?';
 }
 
+// Data is the decrypted message, signature is what the sender claims to be the
+// decryption of the plaintext message using their own private key. You verify
+// this by encrypting the signature with the sender's public key to achieve the
+// plaintext message.
 function verify_signature($data, $signature, $public_key) {
   $raw_signature = base64_decode($signature);
   $result = openssl_verify($data, $raw_signature, $public_key);
 
-  return $result; // True if successful
+  return $result ? true : false; // True if successful
   // Vigenère
   // return 'RK, pym oays onicvr. Iuw bkzhvbw uedf pke conll rt ZV nzxbhz.';
 }
