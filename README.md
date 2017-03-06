@@ -43,8 +43,8 @@ The following **required** functionality is completed:
   * [x]  Required: Your messages are automatically decrypted
 
 8\. Identify the Double Agent
-  * [ ]  Required: Decrypt as many email messages as possible
-  * [ ]  Required: Identify the double agent: ____________________
+  * [x]  Required: Decrypt as many email messages as possible
+  * [ ]  Required: Identify the double agent: inconclusive
 
 The following objectives are **optional**:
 
@@ -79,12 +79,17 @@ Describe any challenges encountered while building the app.
 - If I had more time I would like to make the agents and messages pages more robust
   by adding checks and behaviors for when viewing an invalid (nonexistent) agent id, viewing
   messages from invalid agent id's, etc.
-- Once again, although my signature functions seem to work perfectly fine for any
-  input I give them, for all the preexisting messages in the database the function
-  claims the signature is invalid.
-- I'm confused what the issue is. For messages that I have created and inserted into
-  the database using the dropbox, the signature check is working correctly. It makes
-  me suspect that I'm incorrectly using the OpenSSL functions.
+- For a while it seemed like my signature check wasn't working correctly for any
+  of the preexisting messages, always returning invalid, but I think it works
+  now that I return true or false as opposed to 1 or 0.
+- It seems like I'm using the signature validation function improperly somehow,
+  because although it works for any signatures created on my page, most of the
+  given signatures in the database and the flashdrive files will fail even when
+  it seems like they shouldn't.
+- I wasn't able to verify the signature for any of the Dark Shadow emails, so I
+  can't conclude who the culprit is. My instinct tells me that one of the two
+  emails about "creating a distraction" was supposed to have a valid signature,
+  but my code doesn't think either is valid.
 
 ## License
 
