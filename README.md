@@ -21,7 +21,7 @@ The following **required** functionality is completed:
   * [x]  Required: Repair the asymmetric encrypt and decrypt code
 
 5\. Create/Verify Signature
-  * [x]  Required: Repair the create and verify signature code
+  * [ ]  Required: Repair the create and verify signature code
 
 6\. Encrypted Message 2
   * [x]  Required: Decrypt the message
@@ -66,7 +66,7 @@ The following objectives are **optional**:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/0TMTJBc.gif' title='Video Walkthrough' width='400px' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/wbmpyX1.gif' title='Video Walkthrough' width='400px' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
